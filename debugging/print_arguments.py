@@ -1,11 +1,6 @@
-#!/usr/bin/python3
-import sys
 import os
+import sys
 
-try:
-    print(os.path.basename(sys.argv[0]))
-    for i in range(1, len(sys.argv)):
-        print(sys.argv[i])
-except Exception as e:
-    print(f"Error: {e}")
-    sys.exit(1)
+print(os.path.basename(sys.argv[0]))
+for arg in sys.argv[1:]:
+    print(arg)
